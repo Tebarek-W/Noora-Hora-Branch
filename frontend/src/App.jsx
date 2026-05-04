@@ -421,8 +421,10 @@ const App = () => {
 
 
         <Reveal animation="fade-up" delay={0} className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-jost text-white mb-8">Your Escape Awaits</h2>
-          <p className="text-lg text-white/70 mb-12 font-light tracking-wide max-w-xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-jost text-white mb-8" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.6)' }}>Your Escape Awaits</h2>
+
+          <p className="text-lg text-white mb-12 font-light tracking-wide max-w-xl mx-auto" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}>
+
             Reconnect with nature and yourself in the heart of Noora Hora Branch.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
