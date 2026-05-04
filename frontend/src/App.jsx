@@ -32,21 +32,21 @@ const App = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://placehold.co/1920x1080/1a1816/white?text=NOORA+HORA+BRANCH+HERO"
-            alt="Noora Hora Branch Hero Placeholder"
+            src="https://placehold.co/1920x1080/1a1816/1a1816"
+            alt="Hero Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
 
         <Reveal animation="fade-up" delay={0} className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-0 mb-8">
             <img 
               src={logoSrc} 
               alt="Noora Logo" 
-              className="h-20 md:h-24 lg:h-32 object-contain brightness-0 invert" 
+              className="h-16 md:h-20 lg:h-24 object-contain brightness-0 invert transform translate-y-2" 
             />
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-jost text-white leading-none uppercase tracking-wider" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-jost text-white leading-none uppercase tracking-[0.3em] -ml-6 md:-ml-10 transform scale-y-105" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
               HORA BRANCH
             </h1>
           </div>
