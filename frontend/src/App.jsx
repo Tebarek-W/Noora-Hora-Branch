@@ -82,8 +82,9 @@ const App = () => {
             className="w-full h-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         </div>
+
 
         <Reveal animation="fade-up" delay={0} className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-center gap-0 mb-8">
