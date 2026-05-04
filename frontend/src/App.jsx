@@ -24,6 +24,13 @@ import { Link } from 'react-router-dom';
 import { Reveal } from './components/ui/Reveal';
 import Footer from './components/ui/Footer';
 import logoSrc from './assets/nooralogo.png';
+import heroBg from './assets/Hero.jpg';
+import exteriorImg from './assets/Resort Exterior.jpg';
+import interiorImg from './assets/Interior.jpg';
+import lakeViewImg from './assets/Lake view.JPG';
+
+
+
 
 const App = () => {
   return (
@@ -32,10 +39,11 @@ const App = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://placehold.co/1920x1080/1a1816/1a1816"
+            src={heroBg}
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
+
           <div className="absolute inset-0 bg-black/20" />
         </div>
 
@@ -113,22 +121,24 @@ const App = () => {
             <Reveal animation="fade-down" delay={300} className="grid grid-cols-2 gap-4 relative">
               <div className="space-y-4 pt-12">
                 <img
-                  src="https://placehold.co/600x800/e5e1da/666?text=RESORT+EXTERIOR"
-                  alt="Resort Exterior Placeholder"
+                  src={exteriorImg}
+                  alt="Resort Exterior"
                   className="w-full h-80 object-cover rounded shadow-luxury"
                 />
                 <img
-                  src="https://placehold.co/600x600/e5e1da/666?text=LUXURY+INTERIOR"
-                  alt="Luxury Interior Placeholder"
+                  src={interiorImg}
+                  alt="Luxury Interior"
                   className="w-full h-64 object-cover rounded shadow-luxury"
                 />
+
               </div>
               <div className="space-y-4">
                 <img
-                  src="https://placehold.co/800x1000/e5e1da/666?text=SCENIC+LAKE+VIEW"
-                  alt="Scenic View Placeholder"
+                  src={lakeViewImg}
+                  alt="Scenic Lake View"
                   className="w-full h-[450px] object-cover rounded shadow-luxury"
                 />
+
               </div>
             </Reveal>
           </div>
