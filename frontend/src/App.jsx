@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import {
   Waves,
   Leaf,
@@ -28,12 +29,49 @@ import heroBg from './assets/Hero.jpg';
 import exteriorImg from './assets/Resort Exterior.jpg';
 import interiorImg from './assets/Interior.jpg';
 import lakeViewImg from './assets/Lake view.JPG';
+import space1 from './assets/Space1.jpg';
+import space2 from './assets/Space2.jpg';
+import space3 from './assets/Space3.jpg';
+import space4 from './assets/Space4.jpg';
+import diningImg from './assets/Dining.jpg';
+import cinemaImg from './assets/cinema.jpg';
+import centerImg from './assets/center.jpg';
+import sustainabilityImg from './assets/Environment.jpg';
+
+
+
+
 
 
 
 
 const App = () => {
+  const allImages = [
+    heroBg,
+    exteriorImg,
+    interiorImg,
+    lakeViewImg,
+    space1,
+    space2,
+    space3,
+    space4,
+    diningImg,
+    cinemaImg,
+    centerImg,
+    sustainabilityImg
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % allImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [allImages.length]);
+
   return (
+
     <div className="bg-taupe-50 min-h-screen font-jost overflow-x-hidden w-full">
       {/* 1. Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -193,24 +231,24 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Heritage Suites",
-                image: "https://placehold.co/800x600/ffffff/gold?text=HERITAGE+SUITE",
-                desc: "Traditional design elements meets modern luxury."
+                name: "Presidential Suite",
+                image: space1,
+                desc: "An exclusive environment featuring elegant interiors and national heritage."
               },
               {
-                name: "Modern Lofts",
-                image: "https://placehold.co/800x600/ffffff/gold?text=MODERN+LOFT",
-                desc: "Spacious environments with premium bespoke interiors."
+                name: "Luxury King Room",
+                image: space2,
+                desc: "Spacious and modern living spaces with premium amenities and bespoke design."
               },
               {
-                name: "Private Villas",
-                image: "https://placehold.co/800x600/ffffff/gold?text=PRIVATE+VILLA",
-                desc: "The ultimate privacy with dedicated personal service."
+                name: "Stone Terrace Villa",
+                image: space3,
+                desc: "Immerse yourself in nature with our traditional stone-crafted outdoor living spaces."
               },
               {
-                name: "Garden Lodges",
-                image: "https://placehold.co/800x600/ffffff/gold?text=GARDEN+LODGE",
-                desc: "Wake up to serene views of our lush organic gardens."
+                name: "Serene Spa Suite",
+                image: space4,
+                desc: "Experience ultimate relaxation in our marble-clad suites with private wellness facilities."
               },
             ].map((acc, idx) => (
               <Reveal animation="scale-up" delay={100 * idx} duration={1600} key={idx} className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
@@ -243,10 +281,11 @@ const App = () => {
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <Reveal animation="fade-in" delay={0} className="order-2 lg:order-1 relative">
             <img
-              src="https://placehold.co/1200x800/e5e1da/666?text=DINING+EXPERIENCE"
-              alt="Dining Experience Placeholder"
+              src={diningImg}
+              alt="Dining Experience"
               className="w-full h-[600px] object-cover rounded shadow-luxury"
             />
+
             <div className="absolute -bottom-10 -left-10 bg-white p-8 max-w-xs shadow-luxury hidden md:block">
               <h4 className="font-jost text-gold mb-2 text-lg uppercase tracking-wider">Signature Grill</h4>
               <p className="text-xs text-med-gray font-light leading-relaxed">Experience authentic local flavors with premium globally inspired techniques.</p>
@@ -295,7 +334,8 @@ const App = () => {
 
           <Reveal animation="fade-in" delay={200} className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="md:col-span-2 group relative overflow-hidden h-[420px] border border-black/5 cursor-pointer">
-              <img src="https://placehold.co/1200x800/1a1816/white?text=PRIVATE+CINEMA" alt="Private Cinema Placeholder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <img src={cinemaImg} alt="Private Cinema" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                 <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 backdrop-blur-sm px-3 py-1.5 mb-3">
@@ -307,7 +347,8 @@ const App = () => {
             </div>
 
             <div className="group relative overflow-hidden h-[420px] border border-black/5 cursor-pointer">
-              <img src="https://placehold.co/800x1200/1a1816/white?text=WELLNESS+CENTER" alt="Wellness Center Placeholder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <img src={centerImg} alt="Wellness Center" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                 <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/40 backdrop-blur-sm px-3 py-1.5 mb-3">
@@ -354,10 +395,11 @@ const App = () => {
           <Reveal animation="scale-up" delay={200} className="relative">
             <div className="aspect-square bg-taupe-100 rounded-full flex items-center justify-center p-8">
               <img
-                src="https://placehold.co/800x800/e5e1da/gold?text=SUSTAINABILITY"
-                alt="Sustainability Placeholder"
+                src={sustainabilityImg}
+                alt="Sustainability"
                 className="w-full h-full object-cover rounded-full shadow-luxury"
               />
+
             </div>
             <div className="absolute top-0 right-0 p-6 bg-white shadow-luxury rounded-lg -rotate-12 translate-x-1/4 translate-y-1/4">
               <Leaf className="text-gold w-8 h-8" />
@@ -370,12 +412,13 @@ const App = () => {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://placehold.co/1920x1080/1a1816/white?text=FINAL+ESCAPE"
-            alt="Final Escape Placeholder"
-            className="w-full h-full object-cover"
+            src={allImages[currentImageIndex]}
+            alt="Rotating Gallery"
+            className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
           />
-          <div className="absolute inset-0 bg-lux-gray-900/80" />
+          <div className="absolute inset-0 bg-lux-gray-900/40" />
         </div>
+
 
         <Reveal animation="fade-up" delay={0} className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-jost text-white mb-8">Your Escape Awaits</h2>
