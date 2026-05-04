@@ -11,6 +11,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import logoSrc from "../../assets/nooralogo.png";
+
 const QUICK_LINKS = [
   { label: "Rooms & Suites", href: "#" },
   { label: "Dining Experience", href: "#" },
@@ -53,7 +55,7 @@ const SOCIAL = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#0d261e] overflow-hidden font-jost">
+    <footer className="relative bg-[#0d261e] overflow-hidden font-sans">
       {/* Top Border Gradient */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
       
@@ -65,7 +67,7 @@ const Footer = () => {
           {/* Col 1: Brand & Social */}
           <div className="sm:col-span-2 lg:col-span-4">
             <Link to="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold text-white tracking-widest uppercase">NOORA HORA</span>
+              <img src={logoSrc} alt="Noora Logo" className="h-10 brightness-0 invert" />
             </Link>
 
             <p className="text-white/50 text-sm mb-8 max-w-xs leading-relaxed font-light">

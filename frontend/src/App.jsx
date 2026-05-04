@@ -23,6 +23,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Reveal } from './components/ui/Reveal';
 import Footer from './components/ui/Footer';
+import logoSrc from './assets/nooralogo.png';
 
 const App = () => {
   return (
@@ -39,9 +40,16 @@ const App = () => {
         </div>
 
         <Reveal animation="fade-up" delay={0} className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-jost text-white mb-4 leading-tight uppercase tracking-wider" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
-            NOORA HORA BRANCH
-          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+            <img 
+              src={logoSrc} 
+              alt="Noora Logo" 
+              className="h-20 md:h-24 lg:h-32 object-contain brightness-0 invert" 
+            />
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-jost text-white leading-none uppercase tracking-wider" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
+              HORA BRANCH
+            </h1>
+          </div>
           <h2 className="text-xl md:text-2xl text-gold font-jost mb-6 uppercase tracking-[0.2em]" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.4)' }}>
             Lake Hora, one of five crater lakes in Bishoftu
           </h2>
