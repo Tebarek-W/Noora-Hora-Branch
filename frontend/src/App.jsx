@@ -135,7 +135,7 @@ const App = () => {
       </section>
 
       {/* 2. Introduction & Highlights Integrated */}
-      <section className="py-32 px-4 bg-white overflow-hidden">
+      <section id="about" className="py-32 px-4 bg-white overflow-hidden">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Left: Text Content */}
@@ -236,7 +236,7 @@ const App = () => {
 
 
       {/* 3. Staggered Accommodation (Stay With Us) */}
-      <section className="py-32 px-4 bg-taupe-50">
+      <section id="accommodation" className="py-32 px-4 bg-taupe-50">
         <div className="max-w-[1440px] mx-auto">
           <Reveal animation="fade-down" delay={0} className="text-center mb-24 space-y-4">
             <span className="text-gold uppercase tracking-[0.4em] text-[10px] font-bold block">Refined Living</span>
@@ -321,7 +321,7 @@ const App = () => {
 
 
       {/* 4. The Experience (Dining + Facilities Combined) */}
-      <section className="py-32 px-4 text-white" style={{ backgroundColor: '#1a1816' }}>
+      <section id="experience" className="py-32 px-4 text-white" style={{ backgroundColor: '#1a1816' }}>
         <div className="max-w-[1440px] mx-auto">
           <Reveal animation="fade-down" delay={0} className="text-center mb-20 space-y-4">
             <span className="text-gold uppercase tracking-[0.4em] text-[10px] font-bold block">The Complete Experience</span>
@@ -397,7 +397,7 @@ const App = () => {
       </section>
 
       {/* 5. Philosophy (Sustainability) */}
-      <section className="relative overflow-hidden">
+      <section id="sustainability" className="relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
           {/* Image Half */}
           <Reveal animation="fade-in" delay={0} className="relative h-[400px] lg:h-auto">
@@ -450,7 +450,7 @@ const App = () => {
       </section>
 
       {/* 8. CTA Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section id="contact" className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={allImages[currentImageIndex]}

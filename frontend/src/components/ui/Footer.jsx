@@ -14,20 +14,18 @@ import {
 import logoSrc from "../../assets/nooralogo.png";
 
 const QUICK_LINKS = [
-  { label: "Rooms & Suites", href: "#" },
-  { label: "Dining Experience", href: "#" },
-  { label: "Spa & Wellness", href: "#" },
-  { label: "Events & Meetings", href: "#" },
-  { label: "Virtual 360° Tour", href: "#" },
-  { label: "Special Offers", href: "#" },
+  { label: "Accommodation", href: "#accommodation" },
+  { label: "Dining Experience", href: "#experience" },
+  { label: "Wellness Center", href: "#experience" },
+  { label: "Private Cinema", href: "#experience" },
+  { label: "Sustainability", href: "#sustainability" },
 ];
 
 const EXPLORE_LINKS = [
-  { label: "Gallery", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "Book Now", href: "#" },
-  { label: "About Noora Resort", href: "#" },
-  { label: "AI Concierge", href: "#" },
+  { label: "About Hora Branch", href: "#about" },
+  { label: "Contact Us", href: "#contact" },
+  { label: "Book Your Stay", href: "#contact" },
+  { label: "Location", href: "#contact" },
 ];
 
 const SOCIAL = [
@@ -117,12 +115,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {QUICK_LINKS.map((item) => (
                 <li key={item.label}>
-                  <Link
-                    to={item.href}
+                  <a
+                    href={item.href}
                     className="text-white/50 hover:text-white text-sm transition-colors duration-300 font-light"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -134,12 +132,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {EXPLORE_LINKS.map((item) => (
                 <li key={item.label}>
-                  <Link
-                    to={item.href}
+                  <a
+                    href={item.href}
                     className="text-white/50 hover:text-white text-sm transition-colors duration-300 font-light"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -157,7 +155,7 @@ const Footer = () => {
 
               <div className="flex gap-3 items-center">
                 <Mail size={16} className="text-gold" />
-                reservation@nooraresort.com
+                reservation@noorahora.com
               </div>
 
               <div className="flex gap-3 items-center">
@@ -167,13 +165,13 @@ const Footer = () => {
             </div>
 
             {/* CTA Button */}
-            <Link
-              to="#"
+            <a
+              href="#contact"
               className="mt-8 inline-flex items-center gap-3 px-8 py-3 bg-gold/10 border border-gold/30 text-gold hover:bg-gold hover:text-white transition-all duration-300 uppercase tracking-widest text-xs font-bold"
             >
               Reserve Now
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
