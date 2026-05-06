@@ -64,8 +64,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-16">
           {/* Col 1: Brand & Social */}
           <div className="sm:col-span-2 lg:col-span-4">
-            <Link to="/" className="inline-block mb-6">
-              <img src={logoSrc} alt="Noora Logo" className="h-10 brightness-0 invert" />
+            <Link to="/" className="flex items-center gap-0 mb-6 group">
+              <img src={logoSrc} alt="Noora Logo" className="h-10 brightness-0 invert object-contain" />
+              <span className="text-lg font-jost text-white leading-none uppercase tracking-[0.2em] -ml-2 transform scale-y-105">
+                HORA BRANCH
+              </span>
             </Link>
 
             <p className="text-white/50 text-sm mb-8 max-w-xs leading-relaxed font-light">
